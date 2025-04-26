@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VinylVault - Mon Panier</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>Vinyl<span>Vault</span></h1>
+                </a>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Rechercher un vinyle...">
+                <button id="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="user-actions">
+                <a href="wishlist.html" class="wishlist-icon">
+                    <i class="fas fa-heart"></i>
+                    <span id="wishlist-count">0</span>
+                </a>
+                <a href="cart.html" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-count">0</span>
+                </a>
+            </div>
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Tous les vinyles</a></li>
+                <li><a href="index.html?filter=rock">Rock</a></li>
+                <li><a href="index.html?filter=jazz">Jazz</a></li>
+                <li><a href="index.html?filter=electronic">Électronique</a></li>
+                <li><a href="index.html?filter=hiphop">Hip-Hop</a></li>
+                <li><a href="index.html?filter=classique">Classique</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="breadcrumb">
+            <a href="index.html">Accueil</a> > 
+            <span>Mon Panier</span>
+        </div>
+
+        <section class="cart-section">
+            <h1 class="section-title">Mon Panier</h1>
+            
+            <div class="cart-container">
+                <div class="cart-items" id="cart-items">
+                    <!-- Les produits du panier seront ajoutés dynamiquement ici -->
+                    <div class="empty-cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        <p>Votre panier est vide</p>
+                        <a href="index.html" class="primary-btn">Parcourir la boutique</a>
+                    </div>
+                </div>
+                
+                <div class="cart-summary">
+                    <h3>Résumé de la commande</h3>
+                    <div class="summary-details">
+                        <div class="summary-row">
+                            <span>Sous-total</span>
+                            <span id="subtotal">0,00 €</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Livraison</span>
+                            <span id="shipping">5,99 €</span>
+                        </div>
+                        <div class="summary-row total">
+                            <span>Total</span>
+                            <span id="total">5,99 €</span>
+                        </div>
+                    </div>
+                    <button id="checkout-btn" class="primary-btn">Passer la commande</button>
+                    <p class="secure-checkout">
+                        <i class="fas fa-lock"></i> Paiement sécurisé
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>À propos de VinylVault</h3>
+                <p>Votre destination pour les vinyles de qualité. Nous proposons une sélection soigneusement choisie pour tous les amateurs de musique analogique.</p>
+            </div>
+            <div class="footer-section links">
+                <h3>Liens rapides</h3>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="#">À propos</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Conditions générales</a></li>
+                    <li><a href="#">Politique de confidentialité</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contact</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Rue du Vinyle, 75000 Paris</p>
+                <p><i class="fas fa-phone"></i> +33 1 23 45 67 89</p>
+                <p><i class="fas fa-envelope"></i> contact@vinylvault.fr</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-spotify"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 VinylVault. Tous droits réservés.</p>
+        </div>
+    </footer>
+    <script src="./js/store-utils.js"></script>
+<script src="./js/cart.js"></script>
+</body>
+</html>

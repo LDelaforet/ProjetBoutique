@@ -1,0 +1,325 @@
+[
+  {
+    "id": 1,
+    "title": "Dark Side of the Moon",
+    "artist": "Pink Floyd",
+    "price": "25,50 €",
+    "originalPrice": "30,00 €",
+    "discount": "-15%",
+    "images": ["album1.jpg", "album1-back.jpg", "album1-vinyl.jpg"],
+    "genre": "rock",
+    "era": "70s",
+    "artistType": "band",
+    "stock": 7,
+    "description": "The Dark Side of the Moon est le huitième album studio du groupe britannique Pink Floyd, sorti le 1er mars 1973. Ce chef-d'œuvre emblématique du rock progressif est connu pour ses innovations sonores et ses thèmes philosophiques.",
+    "characteristics": {
+      "format": "33 tours",
+      "label": "Harvest Records",
+      "matiere": "Vinyle 180g"
+    }
+  },
+  {
+    "id": 2,
+    "title": "Abbey Road",
+    "artist": "The Beatles",
+    "price": "28,00 €",
+    "originalPrice": "",
+    "discount": "",
+    "images": ["album2.jpg", "album2-back.jpg", "album2-vinyl.jpg"],
+    "genre": "rock",
+    "era": "60s",
+    "artistType": "band",
+    "stock": 5,
+    "description": "Abbey Road est le onzième album des Beatles, sorti le 26 septembre 1969. C'est le dernier album enregistré par le groupe bien que Let It Be soit sorti ultérieurement.",
+    "characteristics": {
+      "format": "33 tours",
+      "label": "Apple Records",
+      "matiere": "Vinyle 180g"
+    }
+  },
+  {
+    "id": 3,
+    "title": "Kind of Blue",
+    "artist": "Miles Davis",
+    "price": "22,50 €",
+    "originalPrice": "25,00 €",
+    "discount": "-10%",
+    "images": ["album3.jpg", "album3-back.jpg", "album3-vinyl.jpg"],
+    "genre": "jazz",
+    "era": "50s",
+    "artistType": "solo",
+    "stock": 3,
+    "description": "Kind of Blue est un album de jazz modal du trompettiste Miles Davis enregistré en 1959. Il est considéré comme un des albums les plus influents de l'histoire du jazz.",
+    "characteristics": {
+      "format": "33 tours",
+      "label": "Columbia Records",
+      "matiere": "Vinyle 180g"
+    }
+  },
+  {
+    "id": 4,
+    "title": "Thriller",
+    "artist": "Michael Jackson",
+    "price": "27,00 €",
+    "originalPrice": "",
+    "discount": "",
+    "images": ["album4.jpg", "album4-back.jpg", "album4-vinyl.jpg"],
+    "genre": "pop",
+    "era": "80s",
+    "artistType": "solo",
+    "stock": 10,
+    "description": "Thriller est le sixième album studio de Michael Jackson, sorti le 30 novembre 1982. C'est l'album le plus vendu de tous les temps avec plus de 70 millions d'exemplaires.",
+    "characteristics": {
+      "format": "33 tours",
+      "label": "Epic Records",
+      "matiere": "Vinyle standard"
+    }
+  },
+  {
+    "id": 5,
+    "title": "Rumours",
+    "artist": "Fleetwood Mac",
+    "price": "26,50 €",
+    "originalPrice": "",
+    "discount": "",
+    "images": ["album5.jpg", "album5-back.jpg", "album5-vinyl.jpg"],
+    "genre": "rock",
+    "era": "70s",
+    "artistType": "band",
+    "stock": 4,
+    "description": "Rumours est le onzième album studio du groupe de rock britannique-américain Fleetwood Mac, sorti en 1977. C'est l'un des albums les plus vendus de tous les temps.",
+    "characteristics": {
+      "format": "33 tours",
+      "label": "Warner Bros",
+      "matiere": "Vinyle 180g"
+    }
+  },
+  {
+    "id": 6,
+    "title": "Nevermind",
+    "artist": "Nirvana",
+    "price": "20,00 €",
+    "originalPrice": "25,00 €",
+    "discount": "-20%",
+    "images": ["album6.jpg", "album6-back.jpg", "album6-vinyl.jpg"],
+    "genre": "rock",
+    "era": "90s",
+    "artistType": "band",
+    "stock": 8,
+    "description": "Nevermind est le deuxième album studio du groupe américain de grunge Nirvana, sorti le 24 septembre 1991. Cet album a propulsé le mouvement grunge sur la scène internationale.",
+    "characteristics": {
+      "format": "33 tours",
+      "label": "DGC Records",
+      "matiere": "Vinyle standard"
+    }
+  },
+  {
+    "id": 7,
+    "title": "Déjà Vu",
+    "artist": "Crosby, Stills, Nash & Young",
+    "price": "24,50 €",
+    "originalPrice": "28,00 €",
+    "discount": "-12%",
+    "images": ["album7.jpg", "album7-back.jpg", "album7-vinyl.jpg"],
+    "genre": "rock",
+    "era": "70s",
+    "artistType": "band",
+    "stock": 6,
+    "description": "Déjà Vu est le premier album du supergroupe Crosby, Stills, Nash & Young, sorti en 1970. Un mélange de rock, folk et harmonie vocale.",
+    "characteristics": {
+      "format": "33 tours",
+      "label": "Atlantic Records",
+      "matiere": "Vinyle 180g"
+    }
+  },
+  {
+    "id": 8,
+    "title": "In the Court of the Crimson King",
+    "artist": "King Crimson",
+    "price": "28,00 €",
+    "originalPrice": "35,00 €",
+    "discount": "-20%",
+    "images": ["album8.jpg", "album8-back.jpg", "album8-vinyl.jpg"],
+    "genre": "rock",
+    "era": "60s",
+    "artistType": "band",
+    "stock": 4,
+    "description": "In the Court of the Crimson King est le premier album du groupe britannique King Crimson, sorti en 1969. Il est l'un des albums fondateurs du rock progressif.",
+    "characteristics": {
+      "format": "33 tours",
+      "label": "Island Records",
+      "matiere": "Vinyle 180g"
+    }
+  },
+  {
+    "id": 9,
+    "title": "A Love Supreme",
+    "artist": "John Coltrane",
+    "price": "25,00 €",
+    "originalPrice": "30,00 €",
+    "discount": "-17%",
+    "images": ["album9.jpg", "album9-back.jpg", "album9-vinyl.jpg"],
+    "genre": "jazz",
+    "era": "60s",
+    "artistType": "solo",
+    "stock": 5,
+    "description": "A Love Supreme est un album emblématique du saxophoniste John Coltrane, sorti en 1965. Il combine spiritualité et expérimentation musicale dans le jazz modal.",
+    "characteristics": {
+      "format": "33 tours",
+      "label": "Impulse! Records",
+      "matiere": "Vinyle 180g"
+    }
+  },
+  {
+    "id": 10,
+    "title": "OK Computer",
+    "artist": "Radiohead",
+    "price": "28,50 €",
+    "originalPrice": "35,00 €",
+    "discount": "-18%",
+    "images": ["album10.jpg", "album10-back.jpg", "album10-vinyl.jpg"],
+    "genre": "rock",
+    "era": "90s",
+    "artistType": "band",
+    "stock": 6,
+    "description": "OK Computer est l'album révolutionnaire de Radiohead, sorti en 1997. Un mélange de rock alternatif et de musique électronique avec une vision critique de la société.",
+    "characteristics": {
+      "format": "33 tours",
+      "label": "Parlophone",
+      "matiere": "Vinyle 180g"
+    }
+  },
+  {
+    "id": 11,
+    "title": "Discovery",
+    "artist": "Daft Punk",
+    "price": "24,00 €",
+    "originalPrice": "30,00 €",
+    "discount": "-20%",
+    "images": ["album11.jpg", "album11-back.jpg", "album11-vinyl.jpg"],
+    "genre": "electronique",
+    "era": "2000s",
+    "artistType": "band",
+    "stock": 6,
+    "description": "Discovery est le deuxième album studio du duo français Daft Punk, sorti en 2001. Un pilier de la musique électronique moderne, mélangeant house, funk et disco.",
+    "characteristics": {
+      "format": "33 tours",
+      "label": "Virgin Records",
+      "matiere": "Vinyle standard"
+    }
+  },
+  {
+    "id": 12,
+    "title": "The Chronic",
+    "artist": "Dr. Dre",
+    "price": "22,00 €",
+    "originalPrice": "",
+    "discount": "",
+    "images": ["album12.jpg", "album12-back.jpg", "album12-vinyl.jpg"],
+    "genre": "hip-hop",
+    "era": "90s",
+    "artistType": "solo",
+    "stock": 5,
+    "description": "The Chronic est le premier album studio de Dr. Dre, sorti en 1992. Il est un pilier du hip-hop West Coast et a lancé la carrière de Snoop Dogg.",
+    "characteristics": {
+      "format": "33 tours",
+      "label": "Death Row Records",
+      "matiere": "Vinyle standard"
+    }
+  },
+  {
+    "id": 13,
+    "title": "Enter the Wu-Tang (36 Chambers)",
+    "artist": "Wu-Tang Clan",
+    "price": "26,00 €",
+    "originalPrice": "",
+    "discount": "",
+    "images": ["album13.jpg", "album13-back.jpg", "album13-vinyl.jpg"],
+    "genre": "hip-hop",
+    "era": "90s",
+    "artistType": "band",
+    "stock": 7,
+    "description": "Enter the Wu-Tang (36 Chambers) est l'album révolutionnaire du groupe de hip-hop Wu-Tang Clan, sorti en 1993. Un classique du genre avec des raps puissants et des beats agressifs.",
+    "characteristics": {
+      "format": "33 tours",
+      "label": "Loud Records",
+      "matiere": "Vinyle standard"
+    }
+  },
+  {
+    "id": 14,
+    "title": "Toccata and Fugue in D minor",
+    "artist": "Johann Sebastian Bach",
+    "price": "18,00 €",
+    "originalPrice": "",
+    "discount": "",
+    "images": ["album14.jpg", "album14-back.jpg", "album14-vinyl.jpg"],
+    "genre": "classique",
+    "era": "1700s",
+    "artistType": "solo",
+    "stock": 10,
+    "description": "Toccata et fugue en ré mineur est l'une des œuvres les plus célèbres de Bach, souvent associée à des atmosphères dramatiques.",
+    "characteristics": {
+      "format": "33 tours",
+      "label": "Deutsche Grammophon",
+      "matiere": "Vinyle standard"
+    }
+  },
+  {
+    "id": 15,
+    "title": "Symphonie No. 5",
+    "artist": "Ludwig van Beethoven",
+    "price": "21,00 €",
+    "originalPrice": "",
+    "discount": "",
+    "images": ["album15.jpg", "album15-back.jpg", "album15-vinyl.jpg"],
+    "genre": "classique",
+    "era": "1800s",
+    "artistType": "solo",
+    "stock": 8,
+    "description": "La Symphonie No. 5 de Beethoven est l'une des œuvres les plus célèbres de l'histoire de la musique classique, célèbre pour son ouverture dramatique.",
+    "characteristics": {
+      "format": "33 tours",
+      "label": "Philips",
+      "matiere": "Vinyle 180g"
+    }
+  },
+  {
+    "id": 16,
+    "title": "Tommy",
+    "artist": "The Who",
+    "price": "28,50 €",
+    "originalPrice": "35,00 €",
+    "discount": "-18%",
+    "images": ["album16.jpg", "album16-back.jpg", "album16-vinyl.jpg"],
+    "genre": "rock",
+    "era": "60s",
+    "artistType": "band",
+    "stock": 5,
+    "description": "Tommy est le quatrième album studio du groupe britannique The Who, sorti en 1969. Un album concept et l'un des premiers rock-opéras, marquant un tournant dans l'histoire du rock.",
+    "characteristics": {
+      "format": "33 tours",
+      "label": "Track Records",
+      "matiere": "Vinyle 180g"
+    }
+  },
+  {
+    "id": 17,
+    "title": "Apostrophe (')",
+    "artist": "Frank Zappa",
+    "price": "27,00 €",
+    "originalPrice": "",
+    "discount": "",
+    "images": ["album17.jpg", "album17-back.jpg", "album17-vinyl.jpg"],
+    "genre": "rock",
+    "era": "70s",
+    "artistType": "solo",
+    "stock": 4,
+    "description": "Apostrophe (') est le neuvième album studio de Frank Zappa, sorti en 1974. Il mélange rock, jazz, et avant-garde avec l'humour décalé qui caractérise l'artiste.",
+    "characteristics": {
+      "format": "33 tours",
+      "label": "Discreet Records",
+      "matiere": "Vinyle 180g"
+    }
+  }
+]

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Boutique de Vinyles - Produit</title>
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>Vinyl<span>Vault</span></h1>
+                </a>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Rechercher un vinyle...">
+                <button id="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="user-actions">
+                <a href="wishlist.html" class="wishlist-icon">
+                    <i class="fas fa-heart"></i>
+                    <span id="wishlist-count">0</span>
+                </a>
+                <a href="cart.html" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-count">0</span>
+                </a>
+            </div>
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Tous les vinyles</a></li>
+                <li><a href="index.html?filter=rock">Rock</a></li>
+                <li><a href="index.html?filter=jazz">Jazz</a></li>
+                <li><a href="index.html?filter=electronic">Électronique</a></li>
+                <li><a href="index.html?filter=hiphop">Hip-Hop</a></li>
+                <li><a href="index.html?filter=classique">Classique</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="breadcrumb">
+            <!-- Fil d'ariane dynamique -->
+            <a href="index.html">Accueil</a> > 
+            <span>Chargement...</span>
+        </div>
+
+        <section class="product-details">
+            <div class="product-gallery">
+                <div class="main-image-container">
+                    <img id="main-image" src="albumTemplate.jpg" alt="Chargement...">
+                    <button class="gallery-nav prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="gallery-nav next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="thumbnails">
+                    <!-- Les miniatures seront générées dynamiquement -->
+                    <div class="thumbnail active" data-src="albumTemplate.jpg">
+                        <img src="albumTemplate.jpg" alt="Chargement...">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-info">
+                <h1>Chargement...</h1>
+                <div class="product-meta">
+                    <span class="artist">Chargement...</span>
+                    <span class="ref">Réf: VIN00000</span>
+                </div>
+                
+                <div class="product-pricing">
+                    <div class="price-container">
+                        <span class="current-price">0,00 €</span>
+                        <span class="original-price"></span>
+                        <span class="discount-tag"></span>
+                    </div>
+                    <span class="stock-info">Vérification du stock...</span>
+                </div>
+                
+                <div class="product-description">
+                    <p class="description-excerpt">Chargement de la description...</p>
+                    <div class="description-full hidden">
+                        <!-- Le contenu complet sera chargé dynamiquement -->
+                    </div>
+                    <button class="read-more-btn">Lire plus</button>
+                </div>
+                
+                <div class="product-characteristics">
+                    <h3>Caractéristiques</h3>
+                    <ul>
+                        <!-- Les caractéristiques seront chargées dynamiquement -->
+                        <li><span>Genre:</span> Chargement...</li>
+                        <li><span>Année:</span> Chargement...</li>
+                        <li><span>Format:</span> Chargement...</li>
+                        <li><span>Label:</span> Chargement...</li>
+                        <li><span>Matière:</span> Chargement...</li>
+                    </ul>
+                </div>
+                
+                <div class="product-options">
+                    <div class="option-group">
+                        <h4>Couleur</h4>
+                        <div class="color-selector">
+                            <div class="color-option black active" data-color="black">
+                                <span class="color-circle"></span>
+                                <span class="color-name"></span>
+                            </div>
+                            <div class="color-option transparent" data-color="transparent">
+                                <span class="color-circle"></span>
+                                <span class="color-name"></span>
+                            </div>
+                            <div class="color-option multicolor" data-color="multicolor">
+                                <span class="color-circle"></span>
+                                <span class="color-name"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-actions">
+                    <div class="quantity-selector">
+                        <button id="decrease-qty">-</button>
+                        <input type="number" id="quantity" value="1" min="1" max="10">
+                        <button id="increase-qty">+</button>
+                    </div>
+                    <button id="add-to-cart" class="primary-btn"><i class="fas fa-shopping-cart"></i> Ajouter au panier</button>
+                    <button id="add-to-wishlist" class="secondary-btn"><i class="far fa-heart"></i> Ajouter aux favoris</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="similar-products">
+            <h2>Vous pourriez aussi aimer</h2>
+            <div class="products-slider">
+                <!-- Les produits similaires seront chargés dynamiquement -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>À propos de VinylVault</h3>
+                <p>Votre destination pour les vinyles de qualité. Nous proposons une sélection soigneusement choisie pour tous les amateurs de musique analogique.</p>
+            </div>
+            <div class="footer-section links">
+                <h3>Liens rapides</h3>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="#">À propos</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Conditions générales</a></li>
+                    <li><a href="#">Politique de confidentialité</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contact</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Rue du Vinyle, 75000 Paris</p>
+                <p><i class="fas fa-phone"></i> +33 1 23 45 67 89</p>
+                <p><i class="fas fa-envelope"></i> contact@vinylvault.fr</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-spotify"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 VinylVault. Tous droits réservés.</p>
+        </div>
+    </footer>
+    <script src="./js/store-utils.js"></script>
+    <script src="./js/product.js"></script>
+</body>
+</html>
