@@ -233,21 +233,22 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function handleProductCardClick(e) {
+        // Vérifiez si le clic était sur un bouton wishlist ou sur l'icône à l'intérieur
         const wishlistBtn = e.target.closest('.wishlist-btn');
         if (wishlistBtn) {
             const productCard = wishlistBtn.closest('.product-card');
             const productId = parseInt(productCard.getAttribute('data-id'));
             const product = products.find(p => p.id === productId);
-
+    
             if (product) {
                 const wasAdded = StoreUtils.toggleWishlist(productId, {
                     id: product.id,
                     title: product.title,
                     artist: product.artist,
                     price: product.price,
-                    image: product.images ? `/images/${product.images[0]}` : '/images/albumTemplate.jpg'
+                    image: product.images && product.images.length > 0 ? `/images/${product.images[0]}` : '/images/albumTemplate.jpg'
                 });
-
+    
                 const icon = wishlistBtn.querySelector('i');
                 icon.className = wasAdded ? 'fas fa-heart' : 'far fa-heart';
                 StoreUtils.showToast(wasAdded ? "Produit ajouté aux favoris" : "Produit retiré des favoris");

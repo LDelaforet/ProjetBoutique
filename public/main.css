@@ -1461,3 +1461,10 @@ footer {
     margin-right: var(--spacing-xs);
     color: var(--primary-color);
 }
+
+.load-more {
+    text-align: center;
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-xxl);
+    grid-column: 1 / -1;
+}

@@ -41,6 +41,46 @@ const StoreUtils = {
         const cart = localStorage.getItem('cart');
         return cart ? JSON.parse(cart) : [];
     },
+
+    /**
+     * Supprimer un produit du panier
+     * @param {number} productId - L'ID du produit à supprimer
+     * @param {string} productColor - La couleur du produit (si applicable)
+     */
+    removeFromCart: function(productId, productColor) {
+        let cart = this.getCart();
+        
+        // Filtrer le panier pour enlever le produit spécifié
+        cart = cart.filter(item => {
+            // Si le productColor est "default" ou non défini, ne vérifier que l'ID
+            if (productColor === 'default' || !productColor) {
+                return item.id != productId;
+            }
+            // Sinon, vérifier l'ID et la couleur
+            return !(item.id == productId && item.color === productColor);
+        });
+        
+        // Enregistrer le panier mis à jour
+        localStorage.setItem('cart', JSON.stringify(cart));
+        
+        // Afficher un message de confirmation
+        this.showToast("Article supprimé du panier");
+        
+        // Mettre à jour le compteur du panier
+        this.updateCartCount();
+    },
+
+    /**
+     * @param {Array} cart
+     * @returns {number}
+     */
+
+    calculateSubtotal: function(cart) {
+        return cart.reduce((total, item) => {
+            const price = parseFloat(item.price.replace(',', '.').replace(' €', ''));
+            return total + (price * item.quantity);
+        }, 0);
+    },
     
     /**
      * Mettre à jour le compteur du panier dans l'interface
@@ -143,9 +183,6 @@ const StoreUtils = {
         }, duration);
     },
     
-    /**
-     * Initialiser les compteurs au chargement de la page
-     */
     init: function() {
         this.updateCartCount();
         this.updateWishlistCount();

@@ -219,19 +219,18 @@ document.addEventListener('DOMContentLoaded', function() {
         return urlParams.get('id') || '1';
     }
 
-    // La NOUVELLE fonction loadProductData que tu as demandée :
     async function loadProductData(productId) {
         try {
             const response = await fetch(`/api/products/${productId}`);
             const product = await response.json();
-
+    
             if (product) {
                 document.title = `${product.title} - ${product.artist} | VinylVault`;
                 document.querySelector('.product-info h1').textContent = product.title;
                 document.querySelector('.artist').textContent = product.artist;
                 document.querySelector('.ref').textContent = `Réf: VIN${product.id.toString().padStart(5, '0')}`;
                 document.querySelector('.current-price').textContent = product.price;
-
+    
                 if (product.originalPrice) {
                     document.querySelector('.original-price').textContent = product.originalPrice;
                     document.querySelector('.discount-tag').textContent = product.discount;
@@ -239,7 +238,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     document.querySelector('.original-price').style.display = 'none';
                     document.querySelector('.discount-tag').style.display = 'none';
                 }
-
+    
                 const mainImage = document.getElementById('main-image');
                 const thumbnails = document.querySelectorAll('.thumbnail img');
                 if (product.images && product.images.length > 0) {
@@ -251,13 +250,36 @@ document.addEventListener('DOMContentLoaded', function() {
                         }
                     });
                 }
-
+    
                 document.querySelector('.stock-info').textContent = `En stock (${product.stock} exemplaires)`;
                 document.getElementById('quantity').setAttribute('max', product.stock);
-
-                document.querySelector('.description-excerpt').textContent = product.description;
-                document.querySelector('.description-full').innerHTML = `<p>${product.description}</p>`;
-
+    
+                // Gestion de la description
+                const fullDescription = product.description;
+                
+                // Création d'un extrait de la description (100 premiers caractères)
+                const excerptLength = 100;
+                const excerpt = fullDescription.length > excerptLength 
+                    ? fullDescription.substring(0, excerptLength) + '...' 
+                    : fullDescription;
+                
+                const descriptionExcerpt = document.querySelector('.description-excerpt');
+                const descriptionFull = document.querySelector('.description-full');
+                const readMoreBtn = document.querySelector('.read-more-btn');
+                
+                // Configurer l'extrait et la description complète
+                descriptionExcerpt.textContent = excerpt;
+                descriptionFull.innerHTML = `<p>${fullDescription}</p>`;
+                
+                // Afficher ou masquer le bouton "Lire plus" selon la longueur de la description
+                if (fullDescription.length <= excerptLength) {
+                    readMoreBtn.style.display = 'none';
+                } else {
+                    readMoreBtn.style.display = 'block';
+                    readMoreBtn.textContent = 'Lire plus';
+                    descriptionFull.classList.add('hidden');
+                }
+    
                 const characteristicsList = document.querySelector('.product-characteristics ul');
                 characteristicsList.innerHTML = `
                     <li><span>Genre:</span> ${getGenreName(product.genre)}</li>
@@ -266,7 +288,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <li><span>Label:</span> ${product.characteristics.label}</li>
                     <li><span>Matière:</span> ${product.characteristics.matiere}</li>
                 `;
-
+    
                 updateBreadcrumb(product);
                 setupProductPage(product);
             }
